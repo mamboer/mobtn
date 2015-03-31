@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+		<title>{{name}} | Demo: Rounded</title>
+		<meta name="description" content="{{description}}" />
+		<meta name="keywords" content="{{keywords|join(',')}}" />
+		<meta name="author" content="{{author|raw}}" />
+		<link rel="stylesheet" type="text/css" href="dist/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="dist/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="dist/css/effect-rounded.css" />
+	</head>
+	<body class="color-3">
+		<div class="container">
+			<header class="codrops-header">
+				<h1>{{title}}</h1>
+				<p>Inspiration for revealing content by morphing the action element. Examples:</p>
+				<nav class="codrops-demos">
+					<a href="index.html">Login/Signup</a>
+					<a href="index2.html">Terms</a>
+					<a href="index3.html">Info Overlay</a>
+					<a href="index4.html">Subscribe</a>
+					<a href="index5.html">Share</a>
+					<a href="index6.html">Video Player</a>
+					<a href="index7.html">Sidebar Settings</a>
+                    <a href="rounded.html" class="current-demo">Rounded</a>
+				</nav>	
+			</header>
+			<section class="content">
+				<div id="dummy-grid" class="dummy-grid">
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+					<div class="dummy-grid__item"></div>
+				</div>
+			</section> 
+			<div class="dummy-fixed">
+				
+				<div class="mobtn mobtn-rounded">
+					<button class="mobtn-rounded-btn"><!-- Fallback location -->
+						<span class="mobtn-rounded-text">
+							<span class="mobtn-rounded-text-inner mobtn-rounded-text0">Checkout</span>
+							<span class="mobtn-rounded-text-inner mobtn-roundec-text1">$40.70 <i class="fa fa-fw fa-shopping-cart"></i></span>
+						</span>
+					</button>
+					<div class="mobtn-content">
+						<div class="mobtn-content-inner">
+							<table class="checkout__summary">
+								<thead>
+							        <tr><th>Item</th><th>QTY</th><th>Price</th><th>&nbsp;</th></tr>
+							    </thead>
+							    <tbody>
+									<tr><td>Imitations <span>Mark Lanegan</span></td><td>1</td><td>$12.90</td><td><button class="checkout__action"><i class="icon fa fa-trash"></i></button></td></tr>
+									<tr><td>Out Of Exile <span>Audioslave</span></td><td>1</td><td>$15.90</td><td><button class="checkout__action"><i class="icon fa fa-trash"></i></button></td></tr>
+									<tr><td>Cure For Pain <span>Morphine</span></td><td>1</td><td>$11.90</td><td><button class="checkout__action"><i class="icon fa fa-trash"></i></button></td></tr>
+								</tbody>
+							</table><!-- /checkout__summary -->
+							<button class="mobtn-close-btn mobtn-cancel-btn"><i class="icon fa fa-fw fa-close"></i>Close</button>
+						</div><!-- /checkout__order-inner -->
+					</div><!-- /checkout__order -->
+				</div><!-- /checkout -->
+			</div>
+		</div><!-- /container -->
+		<script src="dist/vendors/classor/dist/classy.js"></script>
+        <script src="dist/js/mobtn.js"></script>
+		<script>
+			(function() {
+				var dummy = document.getElementById('dummy-grid');
+				var el = document.querySelectorAll( '.mobtn' ); 
+
+				var el = document.querySelector( '.mobtn' );
+				
+				new MOBtn( el, {
+					closeEl : '.mobtn-close-btn',
+					onBeforeOpen : function() {
+						// don't allow to scroll
+						
+					},
+					onAfterOpen : function() {
+						classy.add( dummy, 'dummy-grid--highlight' );
+					},
+					onBeforeClose : function() {
+					},
+					onAfterClose : function() {
+						classy.remove( dummy, 'dummy-grid--highlight' );
+					}
+				} );
+
+			})();
+		</script>
+	</body>
+</html>

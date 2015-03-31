@@ -11,218 +11,120 @@
         <link rel="stylesheet" type="text/css" href="dist/css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="dist/css/demo.css" />
         <!-- common styles -->
-        <link rel="stylesheet" type="text/css" href="dist/css/mobox.css" />
-        <!-- individual effect -->
-        <link rel="stylesheet" type="text/css" href="dist/css/effects.css" />
+        <link rel="stylesheet" type="text/css" href="dist/css/mobtn.css" />
+        <!-- demo content -->
+        <link rel="stylesheet" type="text/css" href="dist/css/content.css" />
         <script src="dist/vendors/modernizr/modernizr.custom.js"></script>
     </head>
     <body>
         <div id="container" class="container">
-            <div class="content">
-                <header class="codrops-header">
-                    <h1><span class="logo">{{name}}.js</span> <span>A collection of</span> Creative Dialog Effects</h1>
-                    <div class="button-wrap"><button class="trigger">Open Mobox</button></div>
-                </header>
-                <nav id="menu" class="menu">
-                    <div>
-                        <h2>Simple</h2>
-                        <ul>
-                            <li><a href="?shine" data-effect="shine">Shine</a></li>
-                            <li><a href="?piggy" data-effect="piggy">Piggy</a></li>
-                        </ul>
-                        <h2>Body</h2>
-                        <ul>
-                            <li><a data-effect="kimi" href="?kimi">Kimi</a></li>
-                            <li><a data-effect="lv" href="?lv" class="current-demo">LV</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Move/Slide</h2>
-                        <ul>
-                            <li><a data-effect="albin" href="?albin">Albin</a></li>
-                            <li><a data-effect="bruce" href="?bruce">Bruce</a></li>
-                            <li><a href="?jose" data-effect="jose">Jose</a></li>
-                            <li><a href="?aiden" data-effect="aiden">Aiden</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Sticky</h2>
-                        <ul>
-                            <li><a href="?xmagic" data-effect="xmagic">XMagic</a></li>
-                            <li><a href="?alex" data-effect="alex">Alex</a></li>
-                        </ul>
-                        <h2>Jelly</h2>
-                        <ul>
-                            <li><a href="?nornor" data-effect="nornor">NORNOR</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>SVG</h2>
-                        <ul>
-                            <li><a href="?dg" data-effect="dg">DG</a></li>
-                            <li><a href="?panther" data-effect="panther">Panther</a></li>
-                            <li><a href="?lava" data-effect="lava">Lava</a></li>
-                            <li><a href="?anna" data-effect="anna">Anna</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div><!-- /content -->
+            <header class="codrops-header">
+				<h1>{{title}}</h1>
+				<p>Inspiration for revealing content by morphing the action element. Examples:</p>
+				<nav class="codrops-demos">
+					<a href="index.html">Login/Signup</a>
+					<a href="index2.html">Terms</a>
+					<a class="current-demo" href="index3.html">Info Overlay</a>
+					<a href="index4.html">Subscribe</a>
+					<a href="index5.html">Share</a>
+					<a href="index6.html">Video Player</a>
+					<a href="index7.html">Sidebar Settings</a>
+                    <a href="rounded.html">Rounded</a>
+				</nav>
+			</header>
+			<section>
+				<p>Click the button to see it expanding into a fullscreen overlay:</p>
+				<div class="mobtn mobtn-overlay mobtn-fixed">
+					<button type="button">More Info</button>
+					<div class="mobtn-content">
+						<div>
+							<div class="content-style-overlay">
+								<span class="icon icon-close">Close the overlay</span>
+								<h2>About Parsley</h2>
+								<p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+								<p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+								<p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+								<p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+								<p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+								<p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+							</div>
+						</div>
+					</div>
+				</div><!-- mobtn -->
+				<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut juccama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea. Grape silver beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea tomato spring onion azuki bean gourd. Gumbo kakadu plum komatsuna black-eyed pea green bean zucchini gourd winter purslane silver beet rock melon radish asparagus spinach.</p>
+			</section>
+			
         </div><!-- /container -->
-        <div id="notSvgMobox" class="mobox" data-effect="lv" data-effect-rel=".container">
-            <div class="mobox-overlay"></div>
-            <div class="mobox-inner">
-                <span class="mobox-icon-close" data-mobox-close></span>
-                <h2 class="mobox-title"><strong>Howdy</strong>, I'm a dialog box</h2>
-                <div class="mobox-cont"></div>
-                <div class="mobox-actions"><button class="mobox-btn-action" data-mobox-close>Close</button></div>
-            </div>
-        </div>
-
-        <!-- SVG Effects -->
-
-        <div id="svgMobox-dg" 
-            data-morph-open-delay="250",
-            data-morph-open="M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33" 
-            data-morph-close="M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33"
-            class="mobox">
-
-            <div class="mobox-overlay"></div>
-            <div class="mobox-inner">
-                <span class="mobox-icon-close" data-mobox-close></span>
-                <div class="mobox-morph-shape"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
-                        <path d="M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33"></path>
-                    </svg>
-                </div>
-                <div class="mobox-core">
-                    <h2 class="mobox-title"><strong>Howdy</strong>, I'm a svn mobox</h2>
-                    <div class="mobox-cont"></div>
-                    <div class="mobox-actions"><button class="mobox-btn-action" data-mobox-close>Close</button></div>
-                </div>   
-            </div>
-
-        </div>
-
-        <div id="svgMobox-lava" 
-            data-morph-open-duration="1500"
-            data-morph-open-delay="150"
-            data-morph-open="M0,33.699V0c0,0,13.458,0,40.125,0C66.793,0,80,0,80,0v33.974v0.103V60c0,0-13.333,0-40,0c-26.667,0-40,0-40,0V33.699" 
-            data-morph-close="M0,33.699V0c0,0,13.208,11,39.875,11C66.543,11,80,0,80,0v33.974v0.103v13.111C80,47.188,66.667,60,40,60C13.333,60,0,47.062,0,47.062V33.699"
-            class="mobox">
-
-            <div class="mobox-overlay"></div>
-            <div class="mobox-inner">
-                <span class="mobox-icon-close" data-mobox-close></span>
-                <div class="mobox-morph-shape"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
-                        <path d="M0,33.699V0c0,0,13.208,11,39.875,11C66.543,11,80,0,80,0v33.974v0.103v13.111C80,47.188,66.667,60,40,60C13.333,60,0,47.062,0,47.062V33.699"></path>
-                    </svg>
-                </div>                
-                <div class="mobox-core">
-                    <h2 class="mobox-title"><strong>Howdy</strong>, I'm a svn mobox</h2>
-                    <div class="mobox-cont"></div>
-                    <div class="mobox-actions"><button class="mobox-btn-action" data-mobox-close>Close</button></div>
-                </div>   
-            </div>
-
-        </div>
-
-        <div id="svgMobox-panther" 
-            data-morph-open-duration="400"
-            data-morph-close-duration="400"
-            data-morph-open-effect="easeinout"
-            data-morph-close-effect="easeinout"
-            data-morph-open="M0,0h80c0,0,0,9.977,0,29.834c0,19.945,0,30.249,0,30.249H0c0,0,0-10.055,0-30.332C0,8.219,0,0,0,0z" 
-            data-morph-close="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042C3.084,29.762,0,29.75,0,29.75z"
-            class="mobox">
-
-            <div class="mobox-overlay"></div>
-            <div class="mobox-inner">
-                <span class="mobox-icon-close" data-mobox-close></span>
-                <div class="mobox-morph-shape"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
-                        <path d="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042C3.084,29.762,0,29.75,0,29.75z"></path>
-                    </svg>
-                </div>               
-                <div class="mobox-core">
-                    <h2 class="mobox-title"><strong>Howdy</strong>, I'm a svn mobox</h2>
-                    <div class="mobox-cont"></div>
-                    <div class="mobox-actions"><button class="mobox-btn-action" data-mobox-close>Close</button></div>
-                </div>   
-            </div>
-
-        </div>
-
-        <div id="svgMobox-anna" class="mobox">
-
-            <div class="mobox-overlay"></div>
-            <div class="mobox-inner">
-                <span class="mobox-icon-close" data-mobox-close></span>
-                <div class="mobox-morph-shape">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 560 280" preserveAspectRatio="none">
-                        <rect x="3" y="3" fill="none" width="556" height="276"/>
-                    </svg>
-                </div> 
-                <div class="mobox-core">
-                    <h2 class="mobox-title"><strong>Howdy</strong>, I'm a svn mobox</h2>
-                    <div class="mobox-cont"></div>
-                    <div class="mobox-actions"><button class="mobox-btn-action" data-mobox-close>Close</button></div>
-                </div>   
-            </div>
-
-        </div>
-        <!--/ SVG Effects -->
-        <script src="dist/vendors/Snap.svg/dist/snap.svg-min.js"></script>
+        
         <script src="dist/vendors/classor/dist/classy.js"></script>
-        <script src="dist/js/mobox.js"></script>
+        <script src="dist/js/mobtn.js"></script>
         <script>
             (function() {
+				var docElem = window.document.documentElement, didScroll, scrollPosition;
 
-                // get mobox instance according to the selected effect
-                var getMobox = function(eff){
-                    var opts = {
-                        sticky:true,
-                        effect:eff
-                    };
+				// trick to prevent scrolling when opening/closing button
+				function noScrollFn() {
+					window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0 );
+				}
 
-                    var domElm = document.getElementById( Mobox.isSvgEffect(eff) ? ('svgMobox-'+eff) : 'notSvgMobox' );                    
- 
-                    return new Mobox( domElm, opts );
+				function noScroll() {
+					window.removeEventListener( 'scroll', scrollHandler );
+					window.addEventListener( 'scroll', noScrollFn );
+				}
 
-                };
+				function scrollFn() {
+					window.addEventListener( 'scroll', scrollHandler );
+				}
 
+				function canScroll() {
+					window.removeEventListener( 'scroll', noScrollFn );
+					scrollFn();
+				}
 
-                var effect = location.search.replace('?','')||'lv',
-                    container = document.getElementById( 'container' ),
-                    dlgtrigger = document.querySelector( '.trigger' ),
-                    dlg = getMobox( effect ),
-                    allEffects = document.getElementById('menu').querySelectorAll('[data-effect]');
-    
-                dlgtrigger.addEventListener( 'click', dlg.show.bind(dlg) );
+				function scrollHandler() {
+					if( !didScroll ) {
+						didScroll = true;
+						setTimeout( function() { scrollPage(); }, 60 );
+					}
+				};
 
-                var forEach = function(arr,fn){
-                    var len = arr.length;
-                    for(var i=0;i<len;i++){
-                        fn(arr[i]);
-                    }
-                };
+				function scrollPage() {
+					scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
+					didScroll = false;
+				};
 
-                var resetMenu = function(){
-                    forEach(allEffects,function(item){
-                        classy.remove(item,'current-demo');
-                    });
-                };
-
-
-                resetMenu();
-
-                forEach(allEffects,function(elemEffect){
-                    if(elemEffect.getAttribute('data-effect') === effect ){
-                        classy.add(elemEffect,'current-demo');
-                    }
-
-                });
-
+				scrollFn();
+				
+				var el = document.querySelector( '.mobtn' );
+				
+				new MOBtn( el, {
+					closeEl : '.icon-close',
+					onBeforeOpen : function() {
+						// don't allow to scroll
+						noScroll();
+					},
+					onAfterOpen : function() {
+						// can scroll again
+						canScroll();
+						// add class "noscroll" to body
+						classy.add( document.body, 'noscroll' );
+						// add scroll class to main el
+						classy.add( el, 'scroll' );
+					},
+					onBeforeClose : function() {
+						// remove class "noscroll" to body
+						classy.remove( document.body, 'noscroll' );
+						// remove scroll class from main el
+						classy.remove( el, 'scroll' );
+						// don't allow to scroll
+						noScroll();
+					},
+					onAfterClose : function() {
+						// can scroll again
+						canScroll();
+					}
+				} );
+   
             })();
         </script>
     </body>

@@ -1,12 +1,12 @@
 /*!
- * {{name}} {{version}}
- * {{description}} 
+ * mobtn 1.0.0
+ * Creative Morph Buttons Using CSS3 
  * @dependencies 
  *  1. classy.js <http://faso.me/classy>
  *  2. modernizr
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * built at {{date()}} 
+ * built at 1427770111333 
  * Copyright 2015, FASO.ME <http://www.faso.me>
  */
 (function (root, factory) {

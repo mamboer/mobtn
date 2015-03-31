@@ -1,0 +1,26 @@
+{
+  "name": "mobtn",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mamboer/mobtn",
+  "authors": ["Levin Van"],
+  "description": "Creative Morph Buttons Using CSS3",
+  "main": "dist/mobtn.js",
+  "keywords": ["Morph","Morph Effects","MoBTN","Button Effects","css3","animation"],
+  "license": "MIT",
+  "dependencies":{
+    "classor":"~1.0.0"
+  },
+  "ignore": [
+    "gulpfile.js",
+    "*.swig",
+    "src",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "*.json",
+    "site",
+    "*.html"
+  ]
+}

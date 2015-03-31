@@ -121,6 +121,10 @@ gulp.task('copy',function(){
     gulp.src(['src/vendors/**'],{base:'src'})
         .pipe(gulp.dest('dist'))
         .pipe(gulp.dest('site/dist'));
+
+    gulp.src(['src/fonts/**'],{base:'src'})
+        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('site/dist'));
    
 
 });
