@@ -1,0 +1,233 @@
+.dummy-header {
+    display: block;
+    height: 4em;
+    background: rgba(181, 183, 188, 0.3);
+}
+
+.dummy-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2.5em;
+    width: 300px;
+    height: 100%;
+}
+
+.dummy-sidebar__item {
+    margin: 1em 0;
+    width: 100%;
+    height: 2.5em;
+    background: rgba(181, 183, 188, 0.3);
+}
+
+.dummy-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dummy-grid--filled {
+    padding: 2.5em 2em;
+    background: rgba(181, 183, 188, 0.1);
+}
+
+.dummy-grid--sidebar {
+    padding-right: 300px;
+}
+
+.dummy-grid--sidebar .dummy-grid__item {
+    width: 29%;
+}
+
+.dummy-sidebar__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(79, 77, 78);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.active ~ .dummy-sidebar__overlay {
+    opacity: 1;
+}
+
+.dummy-grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(62, 64, 71, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.active + .dummy-grid::after {
+    opacity: 1;
+}
+
+.dummy-grid__item {
+    position: relative;
+    float: left;
+    margin: 0 2% 2em;
+    width: 21%;
+    height: 250px;
+}
+
+.dummy-grid--highlight .dummy-grid__item:first-child::before, 
+.dummy-grid--highlight .dummy-grid__item:nth-child(4)::before,
+.dummy-grid--highlight .dummy-grid__item:nth-child(7)::before {
+    background: rgba(228, 136, 149, 0.5);
+}
+
+.dummy-grid__item::before,
+.dummy-grid__item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.dummy-grid__item::before {
+    top: 0;
+    height: 70%;
+    background: rgba(181, 183, 188, 0.3);
+    transition: background 0.5s;
+}
+
+.dummy-grid__item::after {
+    top: 80%;
+    height: 15%;
+    border-top: 10px solid rgba(181, 183, 188, 0.3);
+    border-bottom: 10px solid rgba(181, 183, 188, 0.3);
+}
+
+.dummy-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    width: 100%;
+    height: ~'calc(3em + 30px)';
+    background: #E2E0D3;
+    text-align: center;
+}
+
+.checkout__summary {
+	margin: 0.5em 0 0.75em;
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 1.15em;
+	line-height: 1.5;
+}
+
+.checkout__summary tr {
+	opacity: 0;
+	transition: ~'transform 0.8s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.3s cubic-bezier(0.7, 0, 0.3, 1)';
+}
+
+.checkout__summary tr:nth-child(1) {
+	transform: translate3d(0, 120px, 0);
+}
+
+.checkout__summary tr:nth-child(2) {
+	transform: translate3d(0, 140px, 0);
+}
+
+.checkout__summary tr:nth-child(3) {
+	transform: translate3d(0, 160px, 0);
+}
+
+.checkout__summary tr:nth-child(4) {
+	transform: translate3d(0, 180px, 0);
+}
+
+.checkout__summary tr:nth-child(5) {
+	transform: translate3d(0, 200px, 0);
+}
+
+.checkout__summary tr:nth-child(6) {
+	transform: translate3d(0, 220px, 0);
+}
+.active .checkout__summary tr {
+	opacity: 1;
+	transform: ~'perspective(1000px) translate3d(0, 0, 0)';
+	transition: ~'transform 0.8s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.8s cubic-bezier(0.7, 0, 0.3, 1)';
+}
+
+.active .checkout__summary tbody tr:nth-child(1) {
+	transition-delay: 0.015s;
+}
+
+.active .checkout__summary tbody tr:nth-child(2) {
+	transition-delay: 0.03s;
+}
+
+.active .checkout__summary tbody tr:nth-child(3) {
+	transition-delay: 0.045s;
+}
+
+.active .checkout__summary tbody tr:nth-child(4) {
+	transition-delay: 0.06s;
+}
+
+.active .checkout__summary tbody tr:nth-child(5) {
+	transition-delay: 0.075s;
+}
+
+.active .checkout__summary tbody tr:nth-child(6) {
+	transition-delay: 0.09s;
+}
+
+.checkout__summary tbody tr:first-child td {
+	padding-top: 0.5em;
+}
+
+.checkout__summary tbody td {
+	padding: 0.25em 0;
+	font-weight: 400;
+	font-size: 0.85em;
+}
+
+.checkout__summary thead th {
+	color: #e48895;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-size: 0.65em;
+	line-height: 2;
+}
+
+.checkout__summary thead th:first-child,
+.checkout__summary tbody td:first-child {
+	text-align: left;
+}
+
+.checkout__summary tbody td span {
+	color: #e48895;
+}
+
+.checkout__summary th:last-child,
+.checkout__summary td:last-child {
+	text-align: right;
+}
+.checkout__action {
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+.checkout__action:focus {
+	outline: none;
+}
+
+.checkout__action .icon {
+	color: #e48895;
+}

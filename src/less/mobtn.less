@@ -20,10 +20,10 @@
         line-height: 80px;
         overflow: hidden;
     }
-    &.open .mobtn-content {
+    &.active .mobtn-content {
         pointer-events: auto;
     }
-    &.open > button {
+    &.active > button {
         pointer-events: none;
     }
 }
@@ -44,7 +44,7 @@
         transition: opacity 0.1s 0.5s;
     }
 
-    &.open > button {
+    &.active > button {
         opacity: 0;
         transition: opacity 0.1s;
     }
@@ -62,7 +62,7 @@
         }
      }
 
-    &.open .mobtn-content {
+    &.active .mobtn-content {
         opacity: 1;
         > div {
             visibility: visible;
@@ -86,8 +86,8 @@
 	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
 }
 
-.mobtn-overlay.open .mobtn-content,
-.mobtn-sidebar.open .mobtn-content {
+.mobtn-overlay.active .mobtn-content,
+.mobtn-sidebar.active .mobtn-content {
 	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;	
 }
 
@@ -100,7 +100,7 @@
         background: #e85657;
     }
 
-    &.open .mobtn-content {
+    &.active .mobtn-content {
         top: 0 !important;
         left: 0 !important;
         width: 100%;
@@ -123,7 +123,7 @@
         pointer-events: none;
     }
 
-    &.open::before {
+    &.active::before {
         opacity: 1;
         pointer-events: auto;
     }
@@ -137,7 +137,7 @@
         transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
     }
 
-    &.open .mobtn-content {
+    &.active .mobtn-content {
         top: 50% !important;
         left: 50% !important;
         margin: -210px 0 0 -300px;
@@ -196,7 +196,7 @@
 	transition: bottom 0.4s 0.1s, right 0.4s 0.1s;
 }
 
-.mobtn-modal-4.open .mobtn-clone,
+.mobtn-modal-4.active .mobtn-clone,
 .no-js .mobtn-modal-4 .mobtn-clone {
 	right: 10px;
 	bottom: 10px;
@@ -206,28 +206,28 @@
 	background: rgba(240,221,204,0.7);
 }
 
-.mobtn-modal-2.open .mobtn-content {
+.mobtn-modal-2.active .mobtn-content {
 	margin: -210px 0 0 -170px;
 	width: 340px;
 	height: 420px;
 }
 
-.mobtn-modal-3.open .mobtn-content {
+.mobtn-modal-3.active .mobtn-content {
 	margin: -255px 0 0 -210px;
 	width: 420px;
 	height: 510px;
 }
 
-.mobtn-modal-3.open .mobtn-content > div {
+.mobtn-modal-3.active .mobtn-content > div {
 	height: 420px;
 }
 
-.mobtn-modal-2.open .mobtn-content > div,
-.mobtn-modal-3.open .mobtn-content > div {
+.mobtn-modal-2.active .mobtn-content > div,
+.mobtn-modal-3.active .mobtn-content > div {
 	transition: opacity 0.3s 0.3s;
 }
 
-.mobtn-modal-4.open .mobtn-content {
+.mobtn-modal-4.active .mobtn-content {
 	margin: -200px 0 0 -320px;
 	width: 640px;
 	height: 400px;
@@ -296,7 +296,7 @@
 	transition: transform 0.3s;
 }
 
-.mobtn-inflow-2.open > button {
+.mobtn-inflow-2.active > button {
 	transform: translateX(-100%);
 }
 
@@ -305,7 +305,7 @@
 	height: 200px;
 }
 
-.mobtn-inflow-2.open {
+.mobtn-inflow-2.active {
 	width: 260px;
 }
 
@@ -330,7 +330,7 @@
         background: #e85657;
     }
 
-    &.open .mobtn-content {
+    &.active .mobtn-content {
         top: 0 !important;
         left: 0 !important;
         width: 300px;
@@ -342,7 +342,7 @@
 
 /* Let's add some nice easing for all cases */
 .mobtn .mobtn-content,
-.mobtn.open .mobtn-content,
+.mobtn.active .mobtn-content,
 .mobtn-modal-4 .mobtn-clone {
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 }
@@ -406,7 +406,7 @@
 /* Media Queries */
 
 @media screen and (max-width: 600px) {
-	.mobtn-modal.open .mobtn-content {
+	.mobtn-modal.active .mobtn-content {
 		top: 0% !important;
 		left: 0% !important;
 		margin: 0;
@@ -467,7 +467,7 @@
 		left: 0px;
 	}
 
-	.mobtn-sidebar.open .mobtn-content {
+	.mobtn-sidebar.active .mobtn-content {
 		height: 100% !important;
 	}
 }

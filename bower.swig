@@ -21,6 +21,11 @@
     "tests",
     "*.json",
     "site",
-    "*.html"
+    "*.html",
+    "dist/css/content.css",
+    "dist/css/demo.css",
+    "dist/fonts/blokk",
+    "dist/fonts/codropsicons",
+    "dist/vendors"
   ]
 }

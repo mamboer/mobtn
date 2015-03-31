@@ -6,7 +6,7 @@
  *  2. modernizr
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * built at 1427770111333 
+ * built at 1427818652706 
  * Copyright 2015, FASO.ME <http://www.faso.me>
  */
 (function (root, factory) {
@@ -62,6 +62,17 @@
         }
     }
 
+    function inArray(el,arr){
+        var len = arr.length,
+            ret = false;
+        for(var i=0; i<len; i++){
+            if(el === arr[i]){
+                ret = true;
+                break;
+            }
+        }
+        return ret;
+    }
 
 	/**
 	 * extend obj function
@@ -82,6 +93,12 @@
     }
 
     MOBtn.prototype.options = {
+        autoPos:true,//auto position the content element
+        lastAnimatedPropertiesInClosing:['opacity'],
+        lastAnimatedPropertiesInOpening:['width','height','left','top'],
+        clActive: 'active',
+        cssBtn: 'button',
+        cssContent:'.mobtn-content',
         closeEl : '',
         onBeforeOpen : function() { return false; },
         onAfterOpen : function() { return false; },
@@ -91,11 +108,11 @@
 
     MOBtn.prototype._init = function() {
         // the button
-        this.button = this.el.querySelector( 'button' );
+        this.button = this.el.querySelector( this.options.cssBtn );
         // state
         this.expanded = false;
         // content el
-        this.contentEl = this.el.querySelector( '.mobtn-content' );
+        this.contentEl = this.el.querySelector( this.options.cssContent );
         // init events
         this._initEvents();
     };
@@ -125,7 +142,8 @@
                 if( support.transitions ) {
                     // open: first opacity then width/height/left/top
                     // close: first width/height/left/top then opacity
-                    if(  ev.propertyName !== 'opacity' ) {
+                    
+                    if(  !inArray(ev.propertyName, self.options.lastAnimatedPropertiesInClosing) ) {
                         return false;
                     }
                     this.removeEventListener( transEndEventName, onEndTransitionFn );
@@ -134,7 +152,7 @@
                 
                 // callback
                 // remove class active (after closing)
-                classy.remove( self.el, 'active' );
+                classy.remove( self.el, self.options.clActive );
                 self.options.onAfterClose();
                 self.expanded = false;
             };
@@ -155,22 +173,24 @@
         var buttonPos = this.button.getBoundingClientRect();
         // need to reset
         classy.add( this.contentEl, 'no-transition' );
-        this.contentEl.style.left = 'auto';
-        this.contentEl.style.top = 'auto';
-        
+        if( this.options.autoPos){
+            this.contentEl.style.left = 'auto';
+            this.contentEl.style.top = 'auto';
+        }
         // add/remove class "open" to the button wraper
         setTimeout( function() { 
-            self.contentEl.style.left = buttonPos.left + 'px';
-            self.contentEl.style.top = buttonPos.top + 'px';
-            
+            if( self.options.autoPos ){
+                self.contentEl.style.left = buttonPos.left + 'px';
+                self.contentEl.style.top = buttonPos.top + 'px';
+            }
             if( self.expanded ) {
                 classy.remove( self.contentEl, 'no-transition' );
-                classy.remove( self.el, 'open' );
+                classy.remove( self.el, self.options.clActive );
                 return;
             }
             setTimeout( function() { 
                 classy.remove( self.contentEl, 'no-transition' );
-                classy.add( self.el, 'open' ); 
+                classy.add( self.el, self.options.clActive ); 
             }, 25 );
 
         }, 25 );
@@ -189,7 +209,8 @@
                 if( support.transitions ) {
                     // open: first opacity then width/height/left/top
                     // close: first width/height/left/top then opacity
-                    if( ev.propertyName !== 'width' && ev.propertyName !== 'height' && ev.propertyName !== 'left' && ev.propertyName !== 'top' ) {
+                    
+                    if( !inArray(ev.propertyName, self.options.lastAnimatedPropertiesInOpening) ){
                         return false;
                     }
                     this.removeEventListener( transEndEventName, onEndTransitionFn );

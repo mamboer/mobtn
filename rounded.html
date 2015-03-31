@@ -8,19 +8,21 @@
 		<meta name="description" content="{{description}}" />
 		<meta name="keywords" content="{{keywords|join(',')}}" />
 		<meta name="author" content="{{author|raw}}" />
+        <script src="dist/vendors/modernizr/modernizr.custom.js"></script>
 		<link rel="stylesheet" type="text/css" href="dist/css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="dist/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="dist/css/content.css" />
+        <link rel="stylesheet" type="text/css" href="dist/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="dist/css/effect-rounded.css" />
 	</head>
-	<body class="color-3">
+	<body class="demo-rounded color-3">
 		<div class="container">
 			<header class="codrops-header">
 				<h1>{{title}}</h1>
 				<p>Inspiration for revealing content by morphing the action element. Examples:</p>
 				<nav class="codrops-demos">
-					<a href="index.html">Login/Signup</a>
+					<a href="index3.html">Login/Signup</a>
 					<a href="index2.html">Terms</a>
-					<a href="index3.html">Info Overlay</a>
+					<a href="index.html">Info Overlay</a>
 					<a href="index4.html">Subscribe</a>
 					<a href="index5.html">Share</a>
 					<a href="index6.html">Video Player</a>
@@ -54,7 +56,7 @@
 					<button class="mobtn-rounded-btn"><!-- Fallback location -->
 						<span class="mobtn-rounded-text">
 							<span class="mobtn-rounded-text-inner mobtn-rounded-text0">Checkout</span>
-							<span class="mobtn-rounded-text-inner mobtn-roundec-text1">$40.70 <i class="fa fa-fw fa-shopping-cart"></i></span>
+							<span class="mobtn-rounded-text-inner mobtn-rounded-text1">$40.70 <i class="icon icon-play"></i></span>
 						</span>
 					</button>
 					<div class="mobtn-content">
@@ -69,7 +71,7 @@
 									<tr><td>Cure For Pain <span>Morphine</span></td><td>1</td><td>$11.90</td><td><button class="checkout__action"><i class="icon fa fa-trash"></i></button></td></tr>
 								</tbody>
 							</table><!-- /checkout__summary -->
-							<button class="mobtn-close-btn mobtn-cancel-btn"><i class="icon fa fa-fw fa-close"></i>Close</button>
+							<button class="mobtn-close-btn mobtn-cancel-btn"><i class="icon icon-close"></i>Close</button>
 						</div><!-- /checkout__order-inner -->
 					</div><!-- /checkout__order -->
 				</div><!-- /checkout -->
@@ -85,7 +87,9 @@
 				var el = document.querySelector( '.mobtn' );
 				
 				new MOBtn( el, {
-					closeEl : '.mobtn-close-btn',
+                    lastAnimatedPropertiesInClosing:['height','width'],
+					autoPos:false,
+                    closeEl : '.mobtn-close-btn',
 					onBeforeOpen : function() {
 						// don't allow to scroll
 						
